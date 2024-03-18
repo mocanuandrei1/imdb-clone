@@ -1,9 +1,13 @@
 import React from "react";
 
-const MovieResults = ({ title, overview, releaseDate, key, voteCount }) => {
+const MovieResults = ({ results }) => {
   return (
     <div>
-      <h2>{title}</h2>
+      {results.map((result) => (
+        <div key={result.id}>
+          <h1>{result.original_title}</h1>
+        </div>
+      ))}
     </div>
   );
 };

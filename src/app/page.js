@@ -17,17 +17,7 @@ const Home = async ({ searchParams }) => {
   }
   const results = data.results;
 
-  return results.map((result) => {
-    return (
-      <MovieResults
-        title={result.original_title}
-        overview={result.overview}
-        releaseDate={result.release_date}
-        key={result.id}
-        voteCount={result.vote_count}
-      />
-    );
-  });
+  return <MovieResults results={results} />;
 };
 
 export default Home;
