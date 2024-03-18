@@ -8,8 +8,6 @@ const NavBarItem = ({ title, param }) => {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
 
-  console.log(genre);
-
   return (
     <Link
       className={`hover:text-amber-500 font-bold text-lg ${
